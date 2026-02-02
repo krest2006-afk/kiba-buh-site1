@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#111827" />
 
   <meta property="og:title" content="Бухгалтерские услуги в Крыму — ИП Киба Елена Александровна" />
-  <meta property="og:description" content="ООО на УСН • ИП на УСН • НКО. Сопровождение, отчётность, налоги, кадры. Спокойно и системно." />
+  <meta property="og:description" content="ООО на УСН • ИП на УСН • НКО. Сопровождение, отчётность, налоги, кадры." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -153,18 +153,6 @@
       color:var(--muted); font-size:13px;
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "ИП Киба Елена Александровна",
-    "areaServed": "Республика Крым",
-    "serviceType": ["Бухгалтерское обслуживание", "ООО на УСН", "ИП на УСН", "НКО"],
-    "email": "krest2006@gmail.com",
-    "telephone": "+79787629958"
-  }
-  </script>
 </head>
 
 <body>
@@ -213,9 +201,9 @@
         </div>
 
         <aside class="card pad" id="lead">
-          <h2 style="margin-top:0">Связаться быстро</h2>
+          <h2 style="margin-top:0">Давайте разберём вашу ситуацию</h2>
           <p class="mini" style="margin-top:-6px">
-            Заполните заявку или напишите сразу в Telegram (сообщение уже будет готово).
+            Можно написать сразу в Telegram или отправить заявку (откроется Gmail в браузере).
           </p>
 
           <form class="form" id="leadForm">
@@ -226,14 +214,14 @@
 
             <div class="row2">
               <select name="segment" required>
-                <option value="" selected disabled>Ваша комания?</option>
+                <option value="" selected disabled>О вашем бизнесе</option>
                 <option>ООО на УСН</option>
                 <option>ИП на УСН</option>
                 <option>НКО</option>
                 <option>Другое</option>
               </select>
               <select name="topic" required>
-                <option value="" selected disabled>Ваша задача?</option>
+                <option value="" selected disabled>Какой вопрос хотите решить?</option>
                 <option>Полное бухгалтерское сопровождение</option>
                 <option>Сдача отчетности / деклараций</option>
                 <option>Кадры / зарплата</option>
@@ -242,25 +230,25 @@
               </select>
             </div>
 
-            <textarea name="message" placeholder="Коротко: вид деятельности, оборот, есть ли сотрудники, что болит?"></textarea>
+            <textarea name="message" placeholder="Коротко: сфера, оборот, сотрудники и что важно решить."></textarea>
 
-            <button class="btn primary" type="submit">Отправить на почту</button>
+            <button class="btn primary" type="submit">Отправить заявку</button>
 
             <div class="note">
-              Данные нужны только для связи по вашей заявке. Никаких “продаж баз” — у меня профессия не та 🙂
+              Заявка откроется в Gmail (в браузере). Если удобнее — напишите в Telegram.
             </div>
           </form>
 
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
             <a class="btn small" href="tel:+79787629958">Позвонить</a>
-            <a class="btn small" href="mailto:krest2006@gmail.com">Email</a>
+            <button class="btn small" type="button" id="copyPhoneBtn">Скопировать номер</button>
 
-            <!-- TELEGRAM (вариант 3: готовое сообщение) -->
+            <a class="btn small" id="emailBtn" target="_blank" rel="noopener">Email</a>
             <a class="btn small" id="tgBtnTop" target="_blank" rel="noopener">Telegram</a>
           </div>
 
           <p class="mini" style="margin-top:10px">
-            Срочно? Напишите в Telegram слово «СРОЧНО» — отвечу быстрее.
+            Срочно? Напишите в Telegram слово «СРОЧНО».
           </p>
         </aside>
       </div>
@@ -314,7 +302,7 @@
         </div>
         <div class="item">
           <h3>3) Сопровождение</h3>
-          <p>Ведение учета, отчетность, сверки, контроль сроков. Бухгалтерия работает — вы живёте.</p>
+          <p>Ведение учета, отчетность, сверки, контроль сроков.</p>
         </div>
       </div>
     </section>
@@ -364,18 +352,13 @@
       <h2>FAQ</h2>
 
       <details>
+        <summary>Почему “Email” открывает Gmail?</summary>
+        <p>Так надежнее: работает прямо в браузере, без настроек почтового клиента.</p>
+      </details>
+
+      <details>
         <summary>Работаете только по Крыму?</summary>
-        <p>Да, сейчас работаю по Республике Крым (очно/по договоренности).</p>
-      </details>
-
-      <details>
-        <summary>Что нужно на старте?</summary>
-        <p>Реквизиты, режим, вид деятельности, оборот, сотрудники и текущее состояние учета (если есть).</p>
-      </details>
-
-      <details>
-        <summary>Можно начать с консультации?</summary>
-        <p>Да. Начнем с консультации и понятного плана действий по вашей ситуации.</p>
+        <p>Да, сейчас работаю по Республике Крым.</p>
       </details>
     </section>
 
@@ -389,10 +372,11 @@
             <div class="item">
               <h3>Телефон</h3>
               <p><a href="tel:+79787629958">+7 978 762-99-58</a></p>
+              <p class="mini"><button class="btn small" type="button" id="copyPhoneBtn2">Скопировать номер</button></p>
             </div>
             <div class="item">
               <h3>Email</h3>
-              <p><a href="mailto:krest2006@gmail.com">krest2006@gmail.com</a></p>
+              <p><a id="emailLinkBottom" target="_blank" rel="noopener">Написать в Gmail</a></p>
             </div>
             <div class="item">
               <h3>Telegram</h3>
@@ -401,7 +385,7 @@
           </div>
 
           <p class="mini" style="margin-top:12px">
-            *Объем работ и ответственность фиксируются договором/офертой. При желании добавим политику конфиденциальности.
+            *Объем работ и ответственность фиксируются договором/офертой.
           </p>
         </div>
 
@@ -431,23 +415,69 @@
   </main>
 
   <script>
+    // Данные
+    const EMAIL = "krest2006@gmail.com";
+    const PHONE_E164 = "+79787629958";
+    const PHONE_TEXT = "+7 978 762-99-58";
+    const TG_USERNAME = "ElenaRKR";
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // ===== Telegram link (вариант 3: готовое сообщение) =====
-    const TG_USERNAME = "ElenaRKR";
-    const TG_TEXT = "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию (Крым).%0A%0AЯ: [ООО/ИП/НКО]%0AРежим: [УСН]%0AСфера: [ ]%0AОборот/мес: [ ]%0AСотрудники: [ ]%0AЗапрос: [сопровождение/отчетность/кадры/консультация]%0A%0AУдобное время для связи: [ ]";
-    const TG_LINK = `https://t.me/${TG_USERNAME}?text=${TG_TEXT}`;
+    // Telegram (готовое сообщение)
+    const tgTemplate =
+      "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию (Крым).\n\n" +
+      "Я: [ООО/ИП/НКО]\n" +
+      "Режим: [УСН]\n" +
+      "Сфера: [ ]\n" +
+      "Оборот/мес: [ ]\n" +
+      "Сотрудники: [ ]\n" +
+      "Запрос: [сопровождение/отчетность/кадры/консультация]\n\n" +
+      "Удобное время для связи: [ ]";
 
-    const tgBtnTop = document.getElementById("tgBtnTop");
-    tgBtnTop.href = TG_LINK;
+    const TG_LINK = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(tgTemplate)}`;
 
-    const tgLinkBottom = document.getElementById("tgLinkBottom");
-    tgLinkBottom.href = TG_LINK;
+    document.getElementById("tgBtnTop").href = TG_LINK;
+    document.getElementById("tgLinkBottom").href = TG_LINK;
 
-    // ===== Отправка формы на почту (без сервера) =====
+    // Email: открываем Gmail Compose в браузере
+    function gmailComposeLink(subject, body) {
+      const base = "https://mail.google.com/mail/?view=cm&fs=1";
+      return `${base}&to=${encodeURIComponent(EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    const emailBtn = document.getElementById("emailBtn");
+    const emailLinkBottom = document.getElementById("emailLinkBottom");
+    const defaultSubject = "Вопрос по бухгалтерскому обслуживанию (Крым)";
+    const defaultBody = "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию.\n\nКто я: [ООО/ИП/НКО]\nРежим: [УСН]\nСфера: [ ]\nОборот/мес: [ ]\nСотрудники: [ ]\nВопрос: [ ]\n\nУдобное время для связи: [ ]";
+    const DEFAULT_GMAIL = gmailComposeLink(defaultSubject, defaultBody);
+
+    emailBtn.href = DEFAULT_GMAIL;
+    emailLinkBottom.href = DEFAULT_GMAIL;
+
+    // Копирование телефона
+    async function copyPhone() {
+      try {
+        await navigator.clipboard.writeText(PHONE_TEXT);
+        alert("Номер скопирован: " + PHONE_TEXT);
+      } catch (e) {
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = PHONE_TEXT;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        alert("Номер скопирован: " + PHONE_TEXT);
+      }
+    }
+    document.getElementById("copyPhoneBtn").addEventListener("click", copyPhone);
+    document.getElementById("copyPhoneBtn2").addEventListener("click", copyPhone);
+
+    // Отправка формы: открываем Gmail Compose с заполненными полями
     const form = document.getElementById("leadForm");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
       const data = new FormData(form);
       const name = (data.get("name") || "").toString().trim();
       const phone = (data.get("phone") || "").toString().trim();
@@ -455,19 +485,17 @@
       const topic = (data.get("topic") || "").toString().trim();
       const message = (data.get("message") || "").toString().trim();
 
-      const subject = encodeURIComponent("Заявка на бухгалтерское обслуживание (Крым)");
-      const body = encodeURIComponent(
+      const subject = "Заявка на бухгалтерское обслуживание (Крым)";
+      const body =
         `Заявка с сайта\n\n` +
         `Имя: ${name}\n` +
         `Телефон: ${phone}\n` +
         `Сегмент: ${segment}\n` +
         `Запрос: ${topic}\n\n` +
-        `Комментарий:\n${message}\n`
-      );
+        `Комментарий:\n${message}\n`;
 
-      window.location.href = `mailto:krest2006@gmail.com?subject=${subject}&body=${body}`;
+      window.open(gmailComposeLink(subject, body), "_blank");
     });
   </script>
 </body>
 </html>
-
