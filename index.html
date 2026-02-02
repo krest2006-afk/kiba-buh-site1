@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ИП Киба Елена Александровна — бухгалтерское обслуживание в Крыму (ООО/ИП/НКО)</title>
+  <meta name="description" content="Бухгалтерское обслуживание в Крыму: ООО на УСН, ИП на УСН, НКО. Отчётность, налоги, кадры. ИП Киба Елена Александровна." />
+  <meta name="theme-color" content="#111827" />
+
+  <meta property="og:title" content="Бухгалтерские услуги в Крыму — ИП Киба Елена Александровна" />
+  <meta property="og:description" content="ООО на УСН • ИП на УСН • НКО. Сопровождение, отчётность, налоги, кадры. Спокойно и системно." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --card:#0f172a; --muted:#94a3b8; --text:#e5e7eb;
+      --brand:#22c55e; --brand2:#38bdf8; --border:rgba(148,163,184,.18);
+      --shadow:0 18px 50px rgba(0,0,0,.35); --radius:18px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans","Helvetica Neue",sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% 10%, rgba(56,189,248,.14), transparent 60%),
+        radial-gradient(900px 500px at 90% 30%, rgba(34,197,94,.12), transparent 60%),
+        linear-gradient(180deg, #070b14, #0b1220 40%, #070b14);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.6);
+      border-bottom:1px solid var(--border);
+    }
+    .nav .row{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 24px; max-width:var(--max); margin:0 auto;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow:0 10px 30px rgba(34,197,94,.18);
+    }
+    .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{padding:9px 12px; border-radius:12px; color:var(--muted); border:1px solid transparent}
+    .navlinks a:hover{color:var(--text); border-color:var(--border); background:rgba(148,163,184,.06)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:14px;
+      border:1px solid var(--border); background:rgba(148,163,184,.06);
+      color:var(--text); cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(56,189,248,.85));
+      border-color: transparent; color:#061019; font-weight:900;
+    }
+    .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}
+    .hero{padding:46px 0 12px}
+    .grid{display:grid; gap:18px; grid-template-columns: 1.25fr .75fr; align-items:stretch}
+    @media (max-width: 920px){.grid{grid-template-columns:1fr}.navlinks{display:none}}
+    .card{
+      background: rgba(15,23,42,.72);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card.pad{padding:22px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      color:var(--muted); border:1px solid var(--border);
+      background:rgba(148,163,184,.06);
+      padding:8px 12px; border-radius:999px; font-size:14px;
+    }
+    .dot{width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 18px rgba(34,197,94,.55)}
+    h1{margin:14px 0 10px; font-size:44px; line-height:1.1}
+    @media (max-width: 520px){h1{font-size:34px}}
+    .lead{color:var(--muted); font-size:18px; margin:0 0 18px}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 0}
+    .badge{
+      font-size:13px; color:var(--muted);
+      border:1px solid var(--border);
+      padding:8px 10px; border-radius:999px;
+      background:rgba(148,163,184,.05);
+    }
+    .split{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:16px}
+    .mini{color:var(--muted); font-size:13px}
+    section{padding:22px 0}
+    h2{font-size:26px; margin:0 0 12px}
+    .cols3{display:grid; gap:14px; grid-template-columns:repeat(3,1fr)}
+    @media (max-width: 920px){.cols3{grid-template-columns:1fr}}
+    .item{
+      padding:16px; border-radius:16px;
+      border:1px solid var(--border);
+      background:rgba(148,163,184,.05);
+    }
+    .item h3{margin:0 0 8px; font-size:16px}
+    .item p{margin:0; color:var(--muted); font-size:14px}
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+    .pricing{display:grid; gap:14px; grid-template-columns:repeat(3,1fr)}
+    @media (max-width: 920px){.pricing{grid-template-columns:1fr}}
+    .price{
+      padding:18px; border-radius:18px;
+      border:1px solid var(--border);
+      background:rgba(148,163,184,.05);
+    }
+    .price.featured{
+      background: linear-gradient(180deg, rgba(34,197,94,.12), rgba(56,189,248,.07));
+      border-color: rgba(34,197,94,.35);
+    }
+    .price .tag{
+      display:inline-block; font-size:12px; color:#061019; font-weight:900;
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(56,189,248,.85));
+      padding:6px 10px; border-radius:999px;
+    }
+    .price h3{margin:10px 0 6px}
+    .price .sum{font-size:28px; font-weight:900}
+    .price .sum small{font-size:14px; color:var(--muted); font-weight:600}
+    .faq details{
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:rgba(148,163,184,.05);
+      padding:14px; margin:10px 0;
+    }
+    .faq summary{cursor:pointer; font-weight:800}
+    .faq p{color:var(--muted); margin:10px 0 0}
+    .form{display:grid; gap:10px}
+    input, textarea, select{
+      width:100%; padding:12px;
+      border-radius:14px; border:1px solid var(--border);
+      background: rgba(2,6,23,.35); color: var(--text); outline:none;
+    }
+    input::placeholder, textarea::placeholder{color:rgba(148,163,184,.7)}
+    textarea{min-height:110px; resize:vertical}
+    .row2{display:grid; gap:10px; grid-template-columns:1fr 1fr}
+    @media (max-width: 520px){.row2{grid-template-columns:1fr}}
+    .note{
+      padding:12px 14px; border-radius:16px;
+      background:rgba(56,189,248,.08);
+      border:1px solid rgba(56,189,248,.25);
+      color:var(--muted); font-size:13px;
+    }
+    .footer{
+      padding:24px 0 40px;
+      border-top:1px solid var(--border);
+      color:var(--muted); font-size:13px;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ИП Киба Елена Александровна",
+    "areaServed": "Республика Крым",
+    "serviceType": ["Бухгалтерское обслуживание", "ООО на УСН", "ИП на УСН", "НКО"],
+    "email": "krest2006@gmail.com",
+    "telephone": "+79787629958"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="row">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="logo" aria-hidden="true"></span>
+        <span>ИП Киба Е.А.</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Навигация">
+        <a href="#services">Направления</a>
+        <a href="#how">Как работаем</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <a class="btn primary small" href="#lead">Получить консультацию</a>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="grid">
+        <div class="card pad">
+          <div class="kicker"><span class="dot"></span> Работаю по Крыму • ООО/ИП на УСН • НКО</div>
+          <h1>Бухгалтерия без “сюрпризов” и внезапной нервотрёпки</h1>
+          <p class="lead">
+            Ведение учета, отчётность и налоги так, чтобы у собственника был порядок в цифрах,
+            а у контролирующих органов — минимум поводов для вопросов.
+          </p>
+
+          <div class="split">
+            <a class="btn primary" href="#lead">Оставить заявку</a>
+            <a class="btn" href="#pricing">Смотреть тарифы</a>
+            <span class="mini">Первая диагностика — 15 минут бесплатно</span>
+          </div>
+
+          <div class="badges">
+            <span class="badge">ООО на УСН</span>
+            <span class="badge">ИП на УСН</span>
+            <span class="badge">НКО: учет и отчётность</span>
+            <span class="badge">Кадры/зарплата — по необходимости</span>
+          </div>
+        </div>
+
+        <aside class="card pad" id="lead">
+          <h2 style="margin-top:0">Связаться быстро</h2>
+          <p class="mini" style="margin-top:-6px">
+            Заполните заявку или напишите сразу в Telegram (сообщение уже будет готово).
+          </p>
+
+          <form class="form" id="leadForm">
+            <div class="row2">
+              <input name="name" placeholder="Имя" autocomplete="name" required />
+              <input name="phone" placeholder="Телефон" autocomplete="tel" required />
+            </div>
+
+            <div class="row2">
+              <select name="segment" required>
+                <option value="" selected disabled>Кто вы?</option>
+                <option>ООО на УСН</option>
+                <option>ИП на УСН</option>
+                <option>НКО</option>
+                <option>Другое</option>
+              </select>
+              <select name="topic" required>
+                <option value="" selected disabled>Что нужно?</option>
+                <option>Полное бухгалтерское сопровождение</option>
+                <option>Сдача отчетности / деклараций</option>
+                <option>Кадры / зарплата</option>
+                <option>Консультация по налогам</option>
+                <option>Разбор требований / писем</option>
+              </select>
+            </div>
+
+            <textarea name="message" placeholder="Коротко: вид деятельности, оборот, есть ли сотрудники, что болит?"></textarea>
+
+            <button class="btn primary" type="submit">Отправить на почту</button>
+
+            <div class="note">
+              Данные нужны только для связи по вашей заявке. Никаких “продаж баз” — у меня профессия не та 🙂
+            </div>
+          </form>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn small" href="tel:+79787629958">Позвонить</a>
+            <a class="btn small" href="mailto:krest2006@gmail.com">Email</a>
+
+            <!-- TELEGRAM (вариант 3: готовое сообщение) -->
+            <a class="btn small" id="tgBtnTop" target="_blank" rel="noopener">Telegram</a>
+          </div>
+
+          <p class="mini" style="margin-top:10px">
+            Срочно? Напишите в Telegram слово «СРОЧНО» — отвечу быстрее.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Ключевые направления</h2>
+      <div class="cols3">
+        <div class="item">
+          <h3>ООО на УСН</h3>
+          <p>Сопровождение: учет, закрытие, отчетность, сверки, контроль рисков.</p>
+          <ul class="list">
+            <li>Сроки и обязательства под контролем</li>
+            <li>Порядок в первичке</li>
+            <li>Понятная картина для собственника</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>ИП на УСН</h3>
+          <p>КУДиР, декларации, контроль платежей и “чтобы всё было правильно”.</p>
+          <ul class="list">
+            <li>Отчетность без сюрпризов</li>
+            <li>Разбор налоговых вопросов</li>
+            <li>Сверки и контроль сроков</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>НКО</h3>
+          <p>Раздельный учет, целевые средства, отчетность и корректные документы.</p>
+          <ul class="list">
+            <li>Раздельный учет</li>
+            <li>Документирование операций</li>
+            <li>Отчетность по регламенту НКО</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>Как работаем</h2>
+      <div class="cols3">
+        <div class="item">
+          <h3>1) Диагностика</h3>
+          <p>Режим, оборот, сотрудники, состояние учета и риски — быстро и по делу.</p>
+        </div>
+        <div class="item">
+          <h3>2) План + тариф</h3>
+          <p>Фиксируем объем работ, сроки, формат взаимодействия и стоимость.</p>
+        </div>
+        <div class="item">
+          <h3>3) Сопровождение</h3>
+          <p>Ведение учета, отчетность, сверки, контроль сроков. Бухгалтерия работает — вы живёте.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Тарифы</h2>
+      <p class="mini">Цены — ориентир. Финально зависит от оборота, сотрудников и объема документов.</p>
+
+      <div class="pricing">
+        <div class="price">
+          <h3>ИП на УСН</h3>
+          <div class="sum">от 7 000 <small>₽/мес</small></div>
+          <ul class="list">
+            <li>КУДиР + отчетность</li>
+            <li>Контроль платежей/сроков</li>
+            <li>Консультации по текущим вопросам</li>
+          </ul>
+          <a class="btn" href="#lead">Оставить заявку</a>
+        </div>
+
+        <div class="price featured">
+          <span class="tag">Чаще всего</span>
+          <h3>ООО на УСН</h3>
+          <div class="sum">от 15 000 <small>₽/мес</small></div>
+          <ul class="list">
+            <li>Закрытие месяца и отчетность</li>
+            <li>Сверки, контроль рисков</li>
+            <li>Поддержка собственника</li>
+          </ul>
+          <a class="btn primary" href="#lead">Оставить заявку</a>
+        </div>
+
+        <div class="price">
+          <h3>НКО</h3>
+          <div class="sum">индивидуально</div>
+          <ul class="list">
+            <li>Раздельный учет</li>
+            <li>Учет целевых средств</li>
+            <li>Отчетность по специфике НКО</li>
+          </ul>
+          <a class="btn" href="#lead">Обсудить</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Работаете только по Крыму?</summary>
+        <p>Да, сейчас работаю по Республике Крым (очно/по договоренности).</p>
+      </details>
+
+      <details>
+        <summary>Что нужно на старте?</summary>
+        <p>Реквизиты, режим, вид деятельности, оборот, сотрудники и текущее состояние учета (если есть).</p>
+      </details>
+
+      <details>
+        <summary>Можно начать с консультации?</summary>
+        <p>Да. Начнем с консультации и понятного плана действий по вашей ситуации.</p>
+      </details>
+    </section>
+
+    <section id="contacts">
+      <div class="grid">
+        <div class="card pad">
+          <h2 style="margin-top:0">Контакты</h2>
+          <p class="lead" style="margin-top:0">ИП Киба Елена Александровна</p>
+
+          <div class="cols3" style="grid-template-columns:repeat(3,1fr)">
+            <div class="item">
+              <h3>Телефон</h3>
+              <p><a href="tel:+79787629958">+7 978 762-99-58</a></p>
+            </div>
+            <div class="item">
+              <h3>Email</h3>
+              <p><a href="mailto:krest2006@gmail.com">krest2006@gmail.com</a></p>
+            </div>
+            <div class="item">
+              <h3>Telegram</h3>
+              <p><a id="tgLinkBottom" target="_blank" rel="noopener">@ElenaRKR</a></p>
+            </div>
+          </div>
+
+          <p class="mini" style="margin-top:12px">
+            *Объем работ и ответственность фиксируются договором/офертой. При желании добавим политику конфиденциальности.
+          </p>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0">Быстрый бриф</h2>
+          <p class="mini" style="margin-top:-6px">Ответьте на 3 вопроса — и я сразу скажу формат и стоимость:</p>
+          <div class="item">
+            <ul class="list">
+              <li>Кто вы: ООО/ИП/НКО и какой режим?</li>
+              <li>Оборот и сколько документов в месяц?</li>
+              <li>Есть сотрудники? сколько?</li>
+            </ul>
+            <a class="btn primary" href="#lead">Заполнить заявку</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" style="padding:0">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; align-items:center">
+          <div>© <span id="year"></span> • ИП Киба Елена Александровна</div>
+          <div>Бухгалтерское обслуживание • Крым</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ===== Telegram link (вариант 3: готовое сообщение) =====
+    const TG_USERNAME = "ElenaRKR";
+    const TG_TEXT = "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию (Крым).%0A%0AЯ: [ООО/ИП/НКО]%0AРежим: [УСН]%0AСфера: [ ]%0AОборот/мес: [ ]%0AСотрудники: [ ]%0AЗапрос: [сопровождение/отчетность/кадры/консультация]%0A%0AУдобное время для связи: [ ]";
+    const TG_LINK = `https://t.me/${TG_USERNAME}?text=${TG_TEXT}`;
+
+    const tgBtnTop = document.getElementById("tgBtnTop");
+    tgBtnTop.href = TG_LINK;
+
+    const tgLinkBottom = document.getElementById("tgLinkBottom");
+    tgLinkBottom.href = TG_LINK;
+
+    // ===== Отправка формы на почту (без сервера) =====
+    const form = document.getElementById("leadForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get("name") || "").toString().trim();
+      const phone = (data.get("phone") || "").toString().trim();
+      const segment = (data.get("segment") || "").toString().trim();
+      const topic = (data.get("topic") || "").toString().trim();
+      const message = (data.get("message") || "").toString().trim();
+
+      const subject = encodeURIComponent("Заявка на бухгалтерское обслуживание (Крым)");
+      const body = encodeURIComponent(
+        `Заявка с сайта\n\n` +
+        `Имя: ${name}\n` +
+        `Телефон: ${phone}\n` +
+        `Сегмент: ${segment}\n` +
+        `Запрос: ${topic}\n\n` +
+        `Комментарий:\n${message}\n`
+      );
+
+      window.location.href = `mailto:krest2006@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
