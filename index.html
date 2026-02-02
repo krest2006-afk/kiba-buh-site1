@@ -203,7 +203,7 @@
         <aside class="card pad" id="lead">
           <h2 style="margin-top:0">Давайте разберём вашу ситуацию</h2>
           <p class="mini" style="margin-top:-6px">
-            Можно написать сразу в Telegram или отправить заявку (откроется Gmail в браузере).
+            Можно написать сразу в Telegram или отправить заявку.
           </p>
 
           <form class="form" id="leadForm">
@@ -235,7 +235,7 @@
             <button class="btn primary" type="submit">Отправить заявку</button>
 
             <div class="note">
-              Заявка откроется в Gmail (в браузере). Если удобнее — напишите в Telegram.
+              Заявка откроется в почтовом сервисе. Если удобнее — напишите в Telegram.
             </div>
           </form>
 
@@ -352,8 +352,8 @@
       <h2>FAQ</h2>
 
       <details>
-        <summary>Почему “Email” открывает Gmail?</summary>
-        <p>Так надежнее: работает прямо в браузере, без настроек почтового клиента.</p>
+        <summary>Как открывается заявка?</summary>
+        <p>После нажатия кнопки откроется ваш почтовый сервис с уже заполненным письмом — останется только отправить.</p>
       </details>
 
       <details>
@@ -440,8 +440,7 @@
     document.getElementById("tgLinkBottom").href = TG_LINK;
 
     // Email: открываем Gmail Compose в браузере
-    function gmailComposeLink(subject, body) {
-      const base = "https://mail.google.com/mail/?view=cm&fs=1";
+    
       return `${base}&to=${encodeURIComponent(EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
@@ -449,10 +448,10 @@
     const emailLinkBottom = document.getElementById("emailLinkBottom");
     const defaultSubject = "Вопрос по бухгалтерскому обслуживанию (Крым)";
     const defaultBody = "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию.\n\nКто я: [ООО/ИП/НКО]\nРежим: [УСН]\nСфера: [ ]\nОборот/мес: [ ]\nСотрудники: [ ]\nВопрос: [ ]\n\nУдобное время для связи: [ ]";
-    const DEFAULT_GMAIL = gmailComposeLink(defaultSubject, defaultBody);
+    const MAILTO_LINK = `mailto:${EMAIL}?subject=${encodeURIComponent(defaultSubject)}&body=${encodeURIComponent(defaultBody)}`;
 
-    emailBtn.href = DEFAULT_GMAIL;
-    emailLinkBottom.href = DEFAULT_GMAIL;
+emailBtn.href = MAILTO_LINK;
+emailLinkBottom.href = MAILTO_LINK;
 
     // Копирование телефона
     async function copyPhone() {
@@ -494,9 +493,10 @@
         `Запрос: ${topic}\n\n` +
         `Комментарий:\n${message}\n`;
 
-      window.open(gmailComposeLink(subject, body), "_blank");
+      window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   </script>
 </body>
 </html>
+
 
