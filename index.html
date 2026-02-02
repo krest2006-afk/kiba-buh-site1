@@ -62,6 +62,20 @@
       border-color: transparent; color:#061019; font-weight:900;
     }
     .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}
+
+    /* Telegram — заметнее, крупнее */
+    .btn.tg{
+      padding:14px 18px;
+      border-radius:16px;
+      font-size:16px;
+      font-weight:900;
+      border-color: transparent;
+      color:#061019;
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(34,197,94,.85));
+      box-shadow: 0 14px 38px rgba(56,189,248,.18);
+      flex: 1 1 100%;
+    }
+
     .hero{padding:46px 0 12px}
     .grid{display:grid; gap:18px; grid-template-columns: 1.25fr .75fr; align-items:stretch}
     @media (max-width: 920px){.grid{grid-template-columns:1fr}.navlinks{display:none}}
@@ -141,12 +155,6 @@
     textarea{min-height:110px; resize:vertical}
     .row2{display:grid; gap:10px; grid-template-columns:1fr 1fr}
     @media (max-width: 520px){.row2{grid-template-columns:1fr}}
-    .note{
-      padding:12px 14px; border-radius:16px;
-      background:rgba(56,189,248,.08);
-      border:1px solid rgba(56,189,248,.25);
-      color:var(--muted); font-size:13px;
-    }
     .footer{
       padding:24px 0 40px;
       border-top:1px solid var(--border);
@@ -196,14 +204,14 @@
             <span class="badge">ООО на УСН</span>
             <span class="badge">ИП на УСН</span>
             <span class="badge">НКО: учет и отчётность</span>
-            <span class="badge">Кадры/зарплата — по необходимости</span>
+            <span class="badge">Кадры/зарплата</span>
           </div>
         </div>
 
         <aside class="card pad" id="lead">
           <h2 style="margin-top:0">Давайте разберём вашу ситуацию</h2>
           <p class="mini" style="margin-top:-6px">
-            Можно написать сразу в Telegram или отправить заявку.
+            Оставьте заявку или напишите в Telegram.
           </p>
 
           <form class="form" id="leadForm">
@@ -221,7 +229,7 @@
                 <option>Другое</option>
               </select>
               <select name="topic" required>
-                <option value="" selected disabled>Ваша задача?</option>
+                <option value="" selected disabled>Какой вопрос хотите решить?</option>
                 <option>Полное бухгалтерское сопровождение</option>
                 <option>Сдача отчетности / деклараций</option>
                 <option>Кадры / зарплата</option>
@@ -233,20 +241,12 @@
             <textarea name="message" placeholder="Коротко: сфера, оборот, сотрудники и что важно решить."></textarea>
 
             <button class="btn primary" type="submit">Отправить заявку</button>
-
-            <div class="note">
-              Заявка откроется в почтовом сервисе. Если удобнее — напишите в Telegram.
-            </div>
           </form>
 
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn small" href="tel:+79787629958">Позвонить</a>
-           
-
-            <a class="btn small" id="emailBtn" target="_blank" rel="noopener">Email</a>
-            <a class="btn small" href="https://t.me/ElenaRKR" target="_blank" rel="noopener">
-Telegram
-</a>
+            <a class="btn tg" id="tgBtnTop" target="_blank" rel="noopener">
+              Написать в Telegram
+            </a>
           </div>
 
           <p class="mini" style="margin-top:10px">
@@ -292,38 +292,67 @@ Telegram
     </section>
 
     <section id="how">
-      <section>
-  <h2>Принципы работы</h2>
+      <h2>Как работаем</h2>
+      <div class="cols3">
+        <div class="item">
+          <h3>1) Диагностика</h3>
+          <p>Режим, оборот, сотрудники, состояние учета и риски — быстро и по делу.</p>
+        </div>
+        <div class="item">
+          <h3>2) План + тариф</h3>
+          <p>Фиксируем объем работ, сроки, формат взаимодействия и стоимость.</p>
+        </div>
+        <div class="item">
+          <h3>3) Сопровождение</h3>
+          <p>Ведение учета, отчетность, сверки, контроль сроков.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="cols3">
+    <!-- FAQ: включены все вопросы, которые ты перечислила -->
+    <section id="faq" class="faq">
+      <h2>Частые вопросы</h2>
 
-    <div class="item">
-      <h3>Спокойствие собственника</h3>
-      <p>
-        Бухгалтерия должна работать так, чтобы вы не вспоминали о ней каждый день.
-        Контролирую сроки, обязательства и отчетность — без авралов.
-      </p>
-    </div>
+      <details>
+        <summary>Как строится взаимодействие?</summary>
+        <p>
+          Согласуем формат (канал связи, сроки, перечень задач), фиксируем объем работ и регулярно
+          контролируем ключевые даты. Я заранее напоминаю о важных обязательствах и собираю недостающие данные.
+        </p>
+      </details>
 
-    <div class="item">
-      <h3>Порядок в цифрах</h3>
-      <p>
-        Вы всегда понимаете финансовое состояние бизнеса —
-        без догадок и неприятных сюрпризов.
-      </p>
-    </div>
+      <details>
+        <summary>Что если возникнет срочный вопрос?</summary>
+        <p>
+          В срочных ситуациях можно написать в Telegram — стараюсь реагировать оперативно,
+          чтобы бизнес не завис из-за бухгалтерских задач.
+        </p>
+      </details>
 
-    <div class="item">
-      <h3>Ответственный подход</h3>
-      <p>
-        Беру в работу ограниченное количество компаний,
-        чтобы сохранять высокий уровень качества и вовлеченности.
-      </p>
-    </div>
+      <details>
+        <summary>Вы несете ответственность за свою работу?</summary>
+        <p>
+          Да. Обязательства, объем работ и ответственность фиксируются договором.
+          Работаю внимательно и системно, чтобы снижать риски для бизнеса.
+        </p>
+      </details>
 
-  </div>
-</section>
+      <details>
+        <summary>Как формируется стоимость?</summary>
+        <p>
+          Стоимость зависит от объема операций и документов, наличия сотрудников и задач по кадрам/зарплате,
+          а также от текущего состояния учета. Перед стартом провожу краткую диагностику и предлагаю оптимальный формат —
+          без переплат и неожиданных доплат.
+        </p>
+      </details>
 
+      <details>
+        <summary>Кому не подойдут мои услуги?</summary>
+        <p>
+          Тем, кто ищет только минимальную цену и не готов выстраивать системный процесс работы с документами.
+          Я делаю акцент на качестве, ответственности и предсказуемом результате.
+        </p>
+      </details>
     </section>
 
     <section id="pricing">
@@ -333,7 +362,7 @@ Telegram
       <div class="pricing">
         <div class="price">
           <h3>ИП на УСН</h3>
-          <div class="sum">от 7 000 <small>₽/мес</small></div>
+          <div class="sum">от 6 000 <small>₽/мес</small></div>
           <ul class="list">
             <li>КУДиР + отчетность</li>
             <li>Контроль платежей/сроков</li>
@@ -345,7 +374,7 @@ Telegram
         <div class="price featured">
           <span class="tag">Чаще всего</span>
           <h3>ООО на УСН</h3>
-          <div class="sum">от 12 000 <small>₽/мес</small></div>
+          <div class="sum">от 10 000 <small>₽/мес</small></div>
           <ul class="list">
             <li>Закрытие месяца и отчетность</li>
             <li>Сверки, контроль рисков</li>
@@ -367,41 +396,25 @@ Telegram
       </div>
     </section>
 
-    <section id="faq" class="faq">
-      <h2>FAQ</h2>
-
-      <details>
-        <summary>Как открывается заявка?</summary>
-        <p>После нажатия кнопки откроется ваш почтовый сервис с уже заполненным письмом — останется только отправить.</p>
-      </details>
-
-      <details>
-        <summary>Работаете только по Крыму?</summary>
-        <p>Нет. Ведем также компании из других регионов</p>
-      </details>
-    </section>
-
     <section id="contacts">
       <div class="grid">
         <div class="card pad">
           <h2 style="margin-top:0">Контакты</h2>
           <p class="lead" style="margin-top:0">ИП Киба Елена Александровна</p>
+          <p class="mini" style="margin-top:-6px">ИНН: 911003111689</p>
 
           <div class="cols3" style="grid-template-columns:repeat(3,1fr)">
             <div class="item">
               <h3>Телефон</h3>
               <p><a href="tel:+79787629958">+7 978 762-99-58</a></p>
-              
             </div>
             <div class="item">
               <h3>Email</h3>
-              <p><a id="emailLinkBottom" target="_blank" rel="noopener">Написать в Gmail</a></p>
+              <p><a href="mailto:krest2006@gmail.com">krest2006@gmail.com</a></p>
             </div>
             <div class="item">
               <h3>Telegram</h3>
-              <p><a href="https://t.me/ElenaRKR" target="_blank" rel="noopener">
-@ElenaRKR
-</a></p>
+              <p><a href="https://t.me/ElenaRKR" target="_blank" rel="noopener">@ElenaRKR</a></p>
             </div>
           </div>
 
@@ -438,15 +451,13 @@ Telegram
   <script>
     // Данные
     const EMAIL = "krest2006@gmail.com";
-    const PHONE_E164 = "+79787629958";
-    const PHONE_TEXT = "+7 978 762-99-58";
-    
+    const TG_USERNAME = "ElenaRKR";
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Telegram (готовое сообщение)
+    // Telegram: готовое сообщение
     const tgTemplate =
-      "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию (Крым).\n\n" +
+      "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию.\n\n" +
       "Я: [ООО/ИП/НКО]\n" +
       "Режим: [УСН]\n" +
       "Сфера: [ ]\n" +
@@ -456,43 +467,14 @@ Telegram
       "Удобное время для связи: [ ]";
 
     const TG_LINK = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(tgTemplate)}`;
-
     document.getElementById("tgBtnTop").href = TG_LINK;
-    document.getElementById("tgLinkBottom").href = TG_LINK;
 
-    // Email: открываем Gmail Compose в браузере
-    
+    // Форма: открываем письмо через web-интерфейс (без текстовых упоминаний на сайте)
+    function webMailLink(subject, body) {
+      const base = "https://mail.google.com/mail/?view=cm&fs=1";
       return `${base}&to=${encodeURIComponent(EMAIL)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
-    const emailBtn = document.getElementById("emailBtn");
-    const emailLinkBottom = document.getElementById("emailLinkBottom");
-    const defaultSubject = "Вопрос по бухгалтерскому обслуживанию (Крым)";
-    const defaultBody = "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию.\n\nКто я: [ООО/ИП/НКО]\nРежим: [УСН]\nСфера: [ ]\nОборот/мес: [ ]\nСотрудники: [ ]\nВопрос: [ ]\n\nУдобное время для связи: [ ]";
-    const MAILTO_LINK = `mailto:${EMAIL}?subject=${encodeURIComponent(defaultSubject)}&body=${encodeURIComponent(defaultBody)}`;
-
-emailBtn.href = MAILTO_LINK;
-emailLinkBottom.href = MAILTO_LINK;
-
-    // Копирование телефона
-    async function copyPhone() {
-      try {
-        await navigator.clipboard.writeText(PHONE_TEXT);
-        alert("Номер скопирован: " + PHONE_TEXT);
-      } catch (e) {
-        // fallback
-        const ta = document.createElement("textarea");
-        ta.value = PHONE_TEXT;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        ta.remove();
-        alert("Номер скопирован: " + PHONE_TEXT);
-      }
-    }
-    
-
-    // Отправка формы: открываем Gmail Compose с заполненными полями
     const form = document.getElementById("leadForm");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -504,26 +486,17 @@ emailLinkBottom.href = MAILTO_LINK;
       const topic = (data.get("topic") || "").toString().trim();
       const message = (data.get("message") || "").toString().trim();
 
-      const subject = "Заявка на бухгалтерское обслуживание (Крым)";
+      const subject = "Заявка на бухгалтерское обслуживание";
       const body =
         `Заявка с сайта\n\n` +
         `Имя: ${name}\n` +
         `Телефон: ${phone}\n` +
-        `Сегмент: ${segment}\n` +
-        `Запрос: ${topic}\n\n` +
+        `О бизнесе: ${segment}\n` +
+        `Вопрос: ${topic}\n\n` +
         `Комментарий:\n${message}\n`;
 
-      window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(webMailLink(subject, body), "_blank");
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
