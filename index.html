@@ -518,15 +518,29 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Telegram: готовое сообщение
+    function getUtmString() {
+  const p = new URLSearchParams(window.location.search);
+  const keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+  const parts = [];
+  keys.forEach(k => {
+    const v = p.get(k);
+    if (v) parts.push(`${k}=${v}`);
+  });
+  return parts.length ? parts.join("&") : "";
+}
+
+const utm = getUtmString();
+
     const tgTemplate =
-      "Здравствуйте! Нужна консультация по бухгалтерскому обслуживанию.\n\n" +
-      "Я: [ООО/ИП/НКО]\n" +
-      "Режим: [УСН]\n" +
-      "Сфера: [ ]\n" +
-      "Оборот/мес: [ ]\n" +
-      "Сотрудники: [ ]\n" +
-      "Запрос: [сопровождение/отчетность/кадры/консультация]\n\n" +
-      "Удобное время для связи: [ ]";
+  "Здравствуйте! Нужен экспресс-разбор учета и налоговых рисков.\n\n" +
+  "Источник: " + (utm ? utm : "не указан") + "\n\n" +
+  "Компания: [ООО/ИП/НКО]\n" +
+  "Режим: [УСН]\n" +
+  "Сфера: [ ]\n" +
+  "Оборот/мес: [ ]\n" +
+  "Сотрудники: [ ]\n" +
+  "Запрос: [сопровождение/отчетность/кадры/консультация]\n\n" +
+  "Удобное время для связи: [ ]";
 
     const TG_LINK = `https://t.me/${TG_USERNAME}?text=${encodeURIComponent(tgTemplate)}`;
     document.getElementById("tgBtnTop").href = TG_LINK;
@@ -562,6 +576,7 @@
   </script>
 </body>
 </html>
+
 
 
 
