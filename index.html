@@ -601,11 +601,15 @@ const utm = getUtmString();
         `Вопрос: ${topic}\n\n` +
         `Комментарий:\n${message}\n`;
 
+      // === цель заявки по выбранному сегменту ===
+reachGoal(goalBySegment(segment));
+
       window.open(webMailLink(subject, body), "_blank");
     });
   </script>
 </body>
 </html>
+
 
 
 
