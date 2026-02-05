@@ -606,9 +606,20 @@ reachGoal(goalBySegment(segment));
 
       window.open(webMailLink(subject, body), "_blank");
     });
-  </script>
+  // === Цели на клики по телефону и Telegram ===
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a) return;
+
+  const href = (a.getAttribute("href") || "").trim();
+
+  if (href.startsWith("tel:")) reachGoal("tel_click");
+  if (href.includes("t.me/")) reachGoal("tg_click");
+}, true);
+</script>
 </body>
 </html>
+
 
 
 
