@@ -527,6 +527,23 @@
     // Данные
     const EMAIL = "krest2006@gmail.com";
     const TG_USERNAME = "ElenaRKR";
+    // === Метрика: цели ===
+const COUNTER_ID = 106655496;
+
+function reachGoal(goalName) {
+  try {
+    if (typeof ym === "function") ym(COUNTER_ID, "reachGoal", goalName);
+  } catch (e) {}
+}
+
+function goalBySegment(segmentText) {
+  const s = (segmentText || "").toLowerCase();
+  if (s.includes("ооо")) return "lead_ooo";
+  if (s.includes("ип")) return "lead_ip";
+  if (s.includes("нко")) return "lead_nko";
+  return "lead_ooo"; // если "Другое" — считаем как ООО (основной оффер)
+}
+
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -589,6 +606,7 @@ const utm = getUtmString();
   </script>
 </body>
 </html>
+
 
 
 
