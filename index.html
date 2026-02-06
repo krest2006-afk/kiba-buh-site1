@@ -614,11 +614,13 @@ document.addEventListener("click", (e) => {
   const href = (a.getAttribute("href") || "").trim();
 
   if (href.startsWith("tel:")) reachGoal("tel_click");
-  if (href.includes("t.me/")) reachGoal("tg_click");
+  if (href.includes("t.me/") || href.includes("t.me?") || href.startsWith("tg:")) reachGoal("tg_click");
+  console.log("METRIKA GOAL:", href);
 }, true);
 </script>
 </body>
 </html>
+
 
 
 
