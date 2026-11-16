@@ -47,7 +47,8 @@
       background: linear-gradient(135deg, var(--brand), var(--brand2));
       box-shadow:0 10px 30px rgba(34,197,94,.18);
     }
-    .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks{display:flex; gap:4px; flex-wrap:nowrap; justify-content:center; align-items:center; white-space:nowrap; min-width:0}
+    .navlinks a{padding:9px 8px}
     .navlinks a{padding:9px 12px; border-radius:12px; color:var(--muted); border:1px solid transparent}
     .navlinks a:hover{color:var(--text); border-color:var(--border); background:rgba(148,163,184,.06)}
     .btn{
@@ -78,7 +79,8 @@
 
     .hero{padding:46px 0 12px}
     .grid{display:grid; gap:18px; grid-template-columns: 1.25fr .75fr; align-items:stretch}
-    @media (max-width: 920px){.grid{grid-template-columns:1fr}.navlinks{display:none}}
+    @media (max-width: 1050px){.navlinks{display:none}}
+    @media (max-width: 920px){.grid{grid-template-columns:1fr}}
     .card{
       background: rgba(15,23,42,.72);
       border:1px solid var(--border);
