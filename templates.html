@@ -23,7 +23,11 @@ a{color:inherit;text-decoration:none}
 h1{font-size:clamp(30px,5vw,46px);line-height:1.13;margin:12px 0 16px}
 .lead{color:var(--muted);max-width:690px;font-size:18px}
 h2{font-size:26px;margin:12px 0 18px}
-.grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(270px,.8fr);gap:18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid>.card:not(.cta){display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.grid>.card:not(.cta) .desc{flex:1}
+.grid>.card:not(.cta) .note{margin-bottom:0}
+.grid>.cta{grid-column:1/-1}
 .card{background:rgba(24,25,28,.9);border:1px solid var(--border);border-radius:var(--radius);padding:25px;box-shadow:0 18px 50px rgba(0,0,0,.22)}
 .tag{display:inline-block;background:rgba(214,172,105,.12);color:#e9c68e;border:1px solid rgba(214,172,105,.42);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:700}
 h3{font-size:23px;margin:17px 0 10px}
