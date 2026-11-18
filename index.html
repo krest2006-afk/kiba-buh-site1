@@ -36,14 +36,14 @@
       border-bottom:1px solid var(--border);
     }
     .nav .row{
-      display:flex; gap:14px; align-items:center; justify-content:space-between;
-      padding:14px 24px; max-width:var(--max); margin:0 auto;
+      display:flex; gap:20px; align-items:center; justify-content:space-between;
+      padding:10px 24px; max-width:1500px; margin:0 auto;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px; flex-shrink:0; white-space:nowrap}
     
-    .navlinks{display:flex; gap:4px; flex-wrap:nowrap; justify-content:center; align-items:center; white-space:nowrap; min-width:0}
+    .navlinks{display:flex; flex:1; gap:0; flex-wrap:nowrap; justify-content:center; align-items:center; white-space:nowrap; min-width:0; font-size:14px}
     .navlinks a{padding:9px 8px}
-    .navlinks a{padding:9px 12px; border-radius:12px; color:var(--muted); border:1px solid transparent}
+    .navlinks a{padding:9px 9px; border-radius:12px; color:var(--muted); border:1px solid transparent}
     .navlinks a:hover{color:var(--text); border-color:var(--border); background:rgba(214,172,105,.055)}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -56,7 +56,7 @@
       background: linear-gradient(135deg, rgba(235,197,140,1), rgba(209,157,87,1));
       border-color: transparent; color:#17120c; font-weight:900;
     }
-    .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}
+    .btn.small{padding:10px 12px; border-radius:12px; font-size:14px}\r\n    .nav > .row > .btn.small{flex-shrink:0; white-space:nowrap}
 
     /* Telegram — заметнее, крупнее */
     .btn.tg{
