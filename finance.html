@@ -7,6 +7,7 @@
 <title>Личные финансы — новости, разборы и таблицы | Киба Елена</title>
 <meta name="description" content="Личные финансы: новости, полезные разборы, таблицы для бюджета, накоплений и управления капиталом. Понятные решения для личных денег.">
 <meta name="theme-color" content="#ffffff">
+<script src="/analytics.js" defer></script>
 <style>
 :root{--bg:#101114;--panel:#1a1b1e;--text:#f2ede5;--muted:#b9b3ab;--gold:#00a63e;--light:#e5c18a;--line:rgba(214,172,105,.32)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#101114,#151619 45%,#101114);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--light);outline-offset:4px}.wrap{max-width:1160px;margin:auto;padding:0 24px}
@@ -50,6 +51,7 @@ header{background:#fff}.nav a{color:#536274}.nav a:hover,.nav a[aria-current]{co
 </style>
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/106655496" style="position:absolute;left:-9999px" alt=""></div></noscript>
 <header class="site-header"><div class="site-header-inner"><a class="site-brand" href="/" aria-label="На главную"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8 V92 H21 V8 Z M21 50 L67 8 H79 L34 50 L79 92 H66 Z M28 46 H82 V54 H28 Z" fill="#00a63e"/></svg><span>КИБА</span></a><nav class="site-links" aria-label="Навигация"><a href="/#services">Направления</a><a href="/#how">Как работаем</a><a href="/#pricing">Тарифы</a><a href="/templates.html">Полезные материалы</a><a href="/news.html">Новости и разборы</a><a href="/finance.html">Личные финансы</a><a href="/#faq">FAQ</a><a href="/#contacts">Контакты</a></nav><a class="site-cta" href="/#lead">Получить консультацию</a></div><details class="mobile-site-menu"><summary aria-label="Открыть меню разделов">☰ Меню</summary><nav aria-label="Мобильная навигация"><a href="/">Главная</a><a href="/#services">Направления</a><a href="/#how">Как работаем</a><a href="/#pricing">Тарифы</a><a href="/templates.html">Полезные материалы</a><a href="/news.html">Новости и разборы</a><a href="/finance.html">Личные финансы</a><a href="/#faq">FAQ</a><a href="/#contacts">Контакты</a></nav></details></header>
 <main>
 <section class="hero"><div class="wrap inner"><div class="eyebrow">Личные финансы</div><h1>Личные финансы — понятные решения для управления личными деньгами, накоплениями и капиталом</h1><p class="intro">Актуальные новости, практические разборы и удобные таблицы, которые помогают принимать взвешенные финансовые решения.</p></div></section>
@@ -73,6 +75,7 @@ if (FINANCE_FEEDBACK_ENDPOINT) {
   feedbackForm.addEventListener("submit", function(event) {
     if (!feedbackForm.reportValidity()) { event.preventDefault(); return; }
     if (feedbackForm.elements.website.value) { event.preventDefault(); return; }
+    if (typeof window.kibaReachGoal === "function") window.kibaReachGoal("finance_feedback_submit");
     feedbackButton.disabled = true;
     feedbackStatus.textContent = "Запрос передан на отправку. Проверьте получение письма; автоматическое подтверждение доставки пока недоступно.";
     window.setTimeout(function(){ feedbackButton.disabled = false; }, 5000);
@@ -81,3 +84,4 @@ if (FINANCE_FEEDBACK_ENDPOINT) {
 </script>
 </body>
 </html>
+
