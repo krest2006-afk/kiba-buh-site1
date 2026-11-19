@@ -30,28 +30,27 @@ header{border-bottom:1px solid var(--line);background:#101114ee;position:sticky;
 </main><footer><div class="wrap foot"><span>Киба Елена · Личные финансы</span><span>Материалы носят информационный характер и не являются индивидуальной инвестиционной рекомендацией.</span></div></footer>
 <script>
 // Укажите URL опубликованного Google Apps Script Web App после настройки.
-const FINANCE_FEEDBACK_ENDPOINT = "";
+const FINANCE_FEEDBACK_ENDPOINT = "https://script.google.com/macros/s/AKfycbwQG4kAT03YX37YzQ5YMWvonEN-4m9VKtmptK2CNp3LNHvS6i1JDJ0eiojge5aSf74Eag/exec";
 const feedbackForm = document.getElementById("financeFeedbackForm");
 const feedbackButton = document.getElementById("feedbackSubmit");
 const feedbackStatus = document.getElementById("feedbackStatus");
 if (FINANCE_FEEDBACK_ENDPOINT) {
+  const frame = document.createElement("iframe");
+  frame.name = "financeFeedbackReceiver";
+  frame.title = "Обработка обращения";
+  frame.style.display = "none";
+  document.body.appendChild(frame);
+  feedbackForm.action = FINANCE_FEEDBACK_ENDPOINT;
+  feedbackForm.method = "POST";
+  feedbackForm.target = frame.name;
   feedbackButton.disabled = false;
   feedbackStatus.textContent = "";
-  feedbackForm.addEventListener("submit", async function(event) {
-    event.preventDefault();
-    if (!feedbackForm.reportValidity()) return;
-    const data = new FormData(feedbackForm);
-    if (data.get("website")) return;
+  feedbackForm.addEventListener("submit", function(event) {
+    if (!feedbackForm.reportValidity()) { event.preventDefault(); return; }
+    if (feedbackForm.elements.website.value) { event.preventDefault(); return; }
     feedbackButton.disabled = true;
-    feedbackStatus.textContent = "Отправляем сообщение...";
-    try {
-      const response = await fetch(FINANCE_FEEDBACK_ENDPOINT, {method:"POST",body:new URLSearchParams(data),redirect:"follow"});
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      feedbackStatus.textContent = "Сообщение отправлено. Спасибо за обратную связь!";
-      feedbackForm.reset();
-    } catch (error) {
-      feedbackStatus.textContent = "Не удалось подтвердить отправку. Попробуйте позднее.";
-    } finally { feedbackButton.disabled = false; }
+    feedbackStatus.textContent = "Запрос передан на отправку. Проверьте получение письма; автоматическое подтверждение доставки пока недоступно.";
+    window.setTimeout(function(){ feedbackButton.disabled = false; }, 5000);
   });
 }
 </script>
