@@ -159,27 +159,15 @@
       border-top:1px solid var(--border);
       color:var(--muted); font-size:13px;
     }
-  
 /* Unified light-green theme */
 :root{--text:#172033;--muted:#536274;--brand:#00a63e;--brand2:#22c55e;--border:#dfe8e3;--gold:#00a63e;--light:#008b35;--line:#dfe8e3;--panel:#fff;--card:#fff;--shadow:0 10px 30px rgba(17,43,29,.06)}body{background:#fff;color:#172033}
 .nav{background:#fff}.navlinks a:hover{background:#effaf3;color:#008c35}.card{background:#fff;border-color:#dfe8e3;box-shadow:var(--shadow)}.btn{background:#fff;color:#14532d;border-color:#b7dcc4}.btn.primary,.btn.tg{background:#00a63e;color:#fff;border-color:#00a63e;box-shadow:none}.kicker,.badge{background:#f6fbf8;border-color:#dcece1}.dot{background:#00a63e}.item,.price,.faq details{background:#fff;border-color:#dfe8e3}.price.featured{background:#f0faf3;border-color:#9ed5b0}.price .tag{background:#dcfce7;color:#166534}input,textarea,select{background:#fff;color:#172033;border-color:#ccd9d1}input::placeholder,textarea::placeholder{color:#718096}.list li::marker{color:#00a63e}
 </style>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106655496', 'ym');
-
-    ym(106655496, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/106655496" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <script src="/analytics.js" defer></script>
 </head>
 
 <body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/106655496" style="position:absolute;left:-9999px" alt=""></div></noscript>
   <header class="nav">
     <div class="row">
       <a class="brand" href="#top" aria-label="На главную">
@@ -618,25 +606,16 @@ const utm = getUtmString();
         `Вопрос: ${topic}\n\n` +
         `Комментарий:\n${message}\n`;
 
-      // === цель заявки по выбранному сегменту ===
-reachGoal(goalBySegment(segment));
+      // Общая цель — итог воронки; сегментные цели используются только как детализация.
+      reachGoal("lead_submit");
+      reachGoal(goalBySegment(segment));
 
       window.open(webMailLink(subject, body), "_blank");
     });
-  // === Цели на клики по телефону и Telegram ===
-document.addEventListener("click", (e) => {
-  const a = e.target.closest("a");
-  if (!a) return;
-
-  const href = (a.getAttribute("href") || "").trim();
-
-  if (href.startsWith("tel:")) reachGoal("tel_click");
-  if (href.includes("t.me/") || href.includes("t.me?") || href.startsWith("tg:")) reachGoal("tg_click");
-  console.log("METRIKA GOAL:", href);
-}, true);
 </script>
 </body>
 </html>
+
 
 
 
