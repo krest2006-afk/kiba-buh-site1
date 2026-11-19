@@ -52,6 +52,17 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:24px 0 35px
 /* Unified light-green theme */
 :root{--text:#172033;--muted:#536274;--brand:#00a63e;--brand2:#22c55e;--border:#dfe8e3;--gold:#00a63e;--light:#008b35;--line:#dfe8e3;--panel:#fff;--card:#fff;--shadow:0 10px 30px rgba(17,43,29,.06)}body{background:#fff;color:#172033}
 .nav{background:#fff}.nav-links a:hover{color:#008c35}.kicker{color:#008c35}.card{background:#fff;border-color:#dfe8e3;box-shadow:0 10px 30px rgba(17,43,29,.06)}.tag{background:#e9f9ee;color:#166534;border-color:#b9e4c6}.btn{color:#14532d;border-color:#b7dcc4;background:#fff}.btn.primary{background:#00a63e;color:#fff}.btn.secondary{background:#f0faf3;color:#087b32;border-color:#91d3a7}.cta{background:#f3fbf5;border-color:#bce2c8}.cta p{color:#435267}.contacts{color:#008c35}
+/* Unified site header */
+.site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #dfe8e3;color:#172033}
+.site-header .site-header-inner{max-width:1500px;margin:auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px}
+.site-header .site-brand{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:800;white-space:nowrap;color:#172033;text-decoration:none;flex-shrink:0}
+.site-header .site-brand svg{width:38px;height:38px;flex-shrink:0}
+.site-header .site-links{display:flex;flex:1;justify-content:center;align-items:center;gap:0;min-width:0;white-space:nowrap}
+.site-header .site-links a{display:inline-block;padding:9px;font-size:14px;color:#536274;text-decoration:none;border-radius:10px}
+.site-header .site-links a:hover{background:#effaf3;color:#008b35}
+.site-header .site-cta{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;white-space:nowrap;padding:10px 13px;background:#00a63e;color:#fff;font-weight:800;font-size:14px;border-radius:12px;text-decoration:none}
+.site-header .site-cta:hover{background:#008b35}
+@media(max-width:1250px){.site-header .site-header-inner{flex-wrap:wrap;gap:8px 14px}.site-header .site-links{order:3;flex:1 1 100%;justify-content:flex-start;overflow-x:auto;scrollbar-width:thin}.site-header .site-links a{flex-shrink:0}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script>
@@ -62,7 +73,7 @@ ym(106655496,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",
 </head>
 <body>
 <noscript><div><img src="https://mc.yandex.ru/watch/106655496" style="position:absolute;left:-9999px" alt=""></div></noscript>
-<header class="nav"><div class="nav-inner"><a class="brand" href="index.html"><svg width="38" height="38" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0"><defs><linearGradient id="kibaGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4ade80"/><stop offset="50%" stop-color="#00a63e"/><stop offset="100%" stop-color="#008b35"/></linearGradient></defs><path d="M12 8 V92 H21 V8 Z M21 50 L67 8 H79 L34 50 L79 92 H66 Z M28 46 H82 V54 H28 Z" fill="url(#kibaGradient)"/></svg><span>КИБА ЕЛЕНА</span></a><nav class="nav-links" aria-label="Навигация"><a href="index.html">Главная</a><a href="#materials">Материалы</a><a href="#help">Контакты</a></nav></div></header>
+<header class="site-header"><div class="site-header-inner"><a class="site-brand" href="/" aria-label="На главную"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8 V92 H21 V8 Z M21 50 L67 8 H79 L34 50 L79 92 H66 Z M28 46 H82 V54 H28 Z" fill="#00a63e"/></svg><span>КИБА</span></a><nav class="site-links" aria-label="Навигация"><a href="/#services">Направления</a><a href="/#how">Как работаем</a><a href="/#pricing">Тарифы</a><a href="/templates.html">Полезные материалы</a><a href="/news.html">Новости и разборы</a><a href="/finance.html">Личные финансы</a><a href="/#faq">FAQ</a><a href="/#contacts">Контакты</a></nav><a class="site-cta" href="/#lead">Получить консультацию</a></div></header>
 <main class="container">
 <section class="hero"><div class="kicker">БИБЛИОТЕКА ДЛЯ БИЗНЕСА</div><h1>Бесплатные чек-листы для открытия и закрытия ИП</h1><p class="lead">Практические чек-листы и таблицы, которые помогают организовать работу, ничего не упустить и держать финансы под контролем.</p></section>
 <section id="materials" aria-labelledby="free-title"><h2 id="free-title">Бесплатные чек-листы</h2><div class="grid">
